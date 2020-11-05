@@ -1,12 +1,12 @@
-function igual() {
+function equal() {
   document.calc.txt.value = eval(calc.txt.value);
 }
 
-function ponto() {
+function point() {
   document.calc.txt.value +='.';
 }
 
-function doisZeros() {
+function twoZeros() {
   document.calc.txt.value +='00';
 }
 
@@ -14,52 +14,81 @@ function zero() {
   document.calc.txt.value +='0';
 }
 
-function um() {
+function one() {
   document.calc.txt.value +='1';
 }
 
-function dois() {
+function two() {
   document.calc.txt.value +='2';
 }
 
-function tres() {
+function three() {
   document.calc.txt.value +='3';
 }
-function quatro() {
+function four() {
   document.calc.txt.value +='4';
 }
-function cinco() {
+function five() {
   document.calc.txt.value +='5';
 }
-function seis() {
+function six() {
   document.calc.txt.value +='6';
 }
-function sete() {
+function seven() {
   document.calc.txt.value +='7';
 }
-function oito() {
+function eight() {
   document.calc.txt.value +='8';
 }
-function nove() {
+function nine() {
   document.calc.txt.value +='9';
 }
 
-function adicao() {
+function sum() {
   document.calc.txt.value +='+';
 }
 
-function subtracao() {
+function subtraction() {
   document.calc.txt.value +='-';
 }
 
-function multiplicacao() {
+function multiplication() {
   document.calc.txt.value +='*';
 }
 
-function divisao() {
+function division() {
   document.calc.txt.value +='/';
 }
 
-function limparCampo() {
+function clearImput() {
   document.calc.txt.value ='';
 }
+
+
+// function sin() {
+//   document.calc.txt.value = Math.sin(document.calc.txt.value);
+// }
+
+// function cos() {
+//   document.calc.txt.value = Math.cos(document.calc.txt.value);
+// }
+
+// function tan() {
+//   document.calc.txt.value = Math.tan(document.calc.txt.value);
+// }
+
+// function log() {
+//   document.calc.txt.value = Math.log10(document.calc.txt.value);
+// }
+
+// function ln() {
+//   document.calc.txt.value = Math.log(document.calc.txt.value);
+// }
+
+// function parenteseEsquerdo() {
+//   document.calc.txt.value = Math.log(document.calc.txt.value);
+// }
+
+// function parenteseDireito() {
+//   document.calc.txt.value = Math.log(document.calc.txt.value);
+// }
