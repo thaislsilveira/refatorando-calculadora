@@ -77,30 +77,54 @@ function clearImput() {
   return document.calc.txt.value = '';
 }
 
-// function sin() {
-//   document.calc.txt.value = Math.sin(document.calc.txt.value);
-// }
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: sin()
+function sin() {
+  document.calc.txt.value = Math.sin(document.calc.txt.value);
+}
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: cos()
+function cos() {
+  document.calc.txt.value = Math.cos(document.calc.txt.value);
+}
 
-// function cos() {
-//   document.calc.txt.value = Math.cos(document.calc.txt.value);
-// }
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: tan()
+function tan() {
+  document.calc.txt.value = Math.tan(document.calc.txt.value);
+}
 
-// function tan() {
-//   document.calc.txt.value = Math.tan(document.calc.txt.value);
-// }
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: log()
+function log() {
+  document.calc.txt.value = Math.log10(document.calc.txt.value);
+}
 
-// function log() {
-//   document.calc.txt.value = Math.log10(document.calc.txt.value);
-// }
+function parenthese(parenthese) {
+  if (document.calc.txt.value.localeCompare("undefined") == 0)
+    document.calc.txt.value = parenthese;
+  else
+    document.calc.txt.value += parenthese;
+}
 
-// function ln() {
-//   document.calc.txt.value = Math.log(document.calc.txt.value);
-// }
+function pi() {
+  if (document.calc.txt.value == 0)
+      document.calc.txt.value = Math.PI;
+  else
+    document.calc.txt.value = document.calc.txt.value * Math.PI;
+}
 
-// function parenteseEsquerdo() {
-//   document.calc.txt.value = Math.log(document.calc.txt.value);
-// }
-
-// function parenteseDireito() {
-//   document.calc.txt.value = Math.log(document.calc.txt.value);
-// }
+//ToDo - o fatorial está funcionando, porém no google e em outras calculadora 
+//científicas o fatorial aparece: numero!
+function factorial() {
+  let x = document.calc.txt.value;
+  if (x == 0 || x == 1)
+      document.calc.txt.value = 1;
+  else {
+      let fact = 1;
+      for (i = 2; i <= x; i++) {
+          fact = fact * i;
+      }
+      document.calc.txt.value = fact;
+  }
+}
