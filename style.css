@@ -14,11 +14,18 @@ body {
     background: #091921;
 }
 .calculator {
-    position: relative;
+    /* position: relative;
+    display: grid; */
+
     display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 .calculator .value { 
-    grid-column: span 4;
+    /* grid-column: span 4; */
+    grid-area: 1 / 1 / 6 / 8;
     height: 100px;
     text-align: right;
     border: none;
