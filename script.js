@@ -1,65 +1,130 @@
-function igual() {
-  document.calc.txt.value = eval(calc.txt.value);
+function equal() {
+
+  // if(!calc.txt.value) return;
+
+  try {
+    document.calc.txt.value = eval(calc.txt.value);
+  } catch{
+    return document.calc.txt.value = 'Erro de sintaxe'
+  }
 }
 
-function ponto() {
-  document.calc.txt.value +='.';
+function point() {
+  return document.calc.txt.value += '.';
 }
 
-function doisZeros() {
-  document.calc.txt.value +='00';
+function twoZeros() {
+  return document.calc.txt.value += '00';
 }
 
 function zero() {
-  document.calc.txt.value +='0';
+  return document.calc.txt.value += '0';
 }
 
-function um() {
-  document.calc.txt.value +='1';
+function one() {
+  return document.calc.txt.value += '1';
 }
 
-function dois() {
-  document.calc.txt.value +='2';
+function two() {
+  return document.calc.txt.value += '2';
 }
 
-function tres() {
-  document.calc.txt.value +='3';
-}
-function quatro() {
-  document.calc.txt.value +='4';
-}
-function cinco() {
-  document.calc.txt.value +='5';
-}
-function seis() {
-  document.calc.txt.value +='6';
-}
-function sete() {
-  document.calc.txt.value +='7';
-}
-function oito() {
-  document.calc.txt.value +='8';
-}
-function nove() {
-  document.calc.txt.value +='9';
+function three() {
+  return document.calc.txt.value += '3';
 }
 
-function adicao() {
-  document.calc.txt.value +='+';
+function four() {
+  return document.calc.txt.value += '4';
 }
 
-function subtracao() {
-  document.calc.txt.value +='-';
+function five() {
+  return document.calc.txt.value += '5';
 }
 
-function multiplicacao() {
-  document.calc.txt.value +='*';
+function six() {
+  return document.calc.txt.value += '6';
 }
 
-function divisao() {
-  document.calc.txt.value +='/';
+function seven() {
+  return document.calc.txt.value += '7';
 }
 
-function limparCampo() {
-  document.calc.txt.value ='';
+function eight() {
+  return document.calc.txt.value += '8';
+}
+
+function nine() {
+  return document.calc.txt.value += '9';
+}
+
+function sum() {
+  return document.calc.txt.value += '+';
+}
+
+function subtraction() {
+  return document.calc.txt.value += '-';
+}
+
+function multiplication() {
+  return document.calc.txt.value += '*';
+}
+
+function division() {
+  return document.calc.txt.value += '/';
+}
+
+function clearImput() {
+  return document.calc.txt.value = '';
+}
+
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: sin()
+function sin() {
+  document.calc.txt.value = Math.sin(document.calc.txt.value);
+}
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: cos()
+function cos() {
+  document.calc.txt.value = Math.cos(document.calc.txt.value);
+}
+
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: tan()
+function tan() {
+  document.calc.txt.value = Math.tan(document.calc.txt.value);
+}
+
+//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
+//google aparece assim: log()
+function log() {
+  document.calc.txt.value = Math.log10(document.calc.txt.value);
+}
+
+function parenthese(parenthese) {
+  if (document.calc.txt.value.localeCompare("undefined") == 0)
+    document.calc.txt.value = parenthese;
+  else
+    document.calc.txt.value += parenthese;
+}
+
+function pi() {
+  if (document.calc.txt.value == 0)
+      document.calc.txt.value = Math.PI;
+  else
+    document.calc.txt.value = document.calc.txt.value * Math.PI;
+}
+
+//ToDo - o fatorial está funcionando, porém no google e em outras calculadora 
+//científicas o fatorial aparece: numero!
+function factorial() {
+  let x = document.calc.txt.value;
+  if (x == 0 || x == 1)
+      document.calc.txt.value = 1;
+  else {
+      let fact = 1;
+      for (i = 2; i <= x; i++) {
+          fact = fact * i;
+      }
+      document.calc.txt.value = fact;
+  }
 }
