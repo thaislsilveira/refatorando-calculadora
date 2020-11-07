@@ -1,29 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+:root {
+    --color-primary: #8464e6;
+    --color-primary-hover: #9466ff;
+    --color-secondary: #04d361;
+    --color-key: #b1babe;
+    --color-pink: #ff3077;
+    --color-pink-hover: #c3255d;
+    --color-blue: #03b1ff;
+    --color-blue-hover: #0495d6;
+    --color-background: #091921;
+    --color-grey-dark: #8c8c8c;
+    --color-grey-medium:  #bfbfbf;
+    --color-grey-light: #cccccc;
+    --color-black: #2b2b2b;
+    --color-box-shadow: rgba(68, 68, 68, 0.6);
+    --color-white: #e1e1e6;
+}
+
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body { 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #091921;
+    background: var(--color-background);
 }
-.calculator {
-    /* position: relative;
-    display: grid; */
 
+.calculator {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 1px;
+    grid-column-gap: 0px;
     grid-row-gap: 1px;
-    
+    padding: 35px;
+    border-radius: 10px;
+    background-color: var(--color-grey-medium);   
 }
+
+.calculator div {
+    padding: 10px 7px;
+}
+
+.columnOne, .columnTwo {
+    background-color: var(--color-grey-dark);
+}
+
+.columnThree, .columnFour, .columnFive, .columnSix {
+    background-color: var(--color-grey-light);
+}
+
 .calculator .value { 
     /* grid-column: span 4; */
     grid-area: 1 / 1 / 6 / 8;
@@ -34,27 +66,50 @@ body {
     outline: none;
     padding: 10px;
     font-size: 18px;
+    border-radius: 10px 10px 0 0;
 }
+
 .calculator span {
+    position: relative;
     display: grid;
     width: 100%;
     height: 60px;
-    color: #fff;
-    background: #b1babe;
+    color: var(--color-white);
+    background: var(--color-key);
     place-items: center;
     border-radius: 20px;
+    margin: 5px 0;
+    transition: background .5s;
+    right: .8px;
+    bottom: .8px;
+    box-shadow: 1px 2px 1px var(--color-box-shadow);
 }
 
 .calculator span:hover {
-    background: #74ff3b;
-    color: #111
-}
-.calculator span.clear {
-    grid-column: span 2;
-    width: 100%;
-    background: #ff3077
+    background: var(--color-secondary);
+    color: var(--color-black);
+    cursor: pointer;
+    right: 0px;
+    bottom: 0px;
+    box-shadow: none;
 }
 
 .calculator span.equal {
-    background: #03b1ff;
+    background: var(--color-blue);
+}
+
+.calculator span.equal:hover {
+    background: var(--color-blue-hover);
+    color: var(--color-white);
+}
+
+.calculator span.clear {
+    grid-column: span 2;
+    width: 100%;
+    background: var(--color-pink)
+}
+
+.calculator span.clear:hover {
+    color: white;
+    background-color: var(--color-pink-hover);
 }
