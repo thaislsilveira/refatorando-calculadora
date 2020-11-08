@@ -100,11 +100,12 @@ function log() {
   document.calc.txt.value = Math.log10(document.calc.txt.value);
 }
 
-function parenthese(parenthese) {
+
+function show(content) {
   if (document.calc.txt.value.localeCompare("undefined") == 0)
-    document.calc.txt.value = parenthese;
+    document.calc.txt.value = content;
   else
-    document.calc.txt.value += parenthese;
+    document.calc.txt.value += content;
 }
 
 function pi() {
@@ -127,4 +128,31 @@ function factorial() {
       }
       document.calc.txt.value = fact;
   }
+}
+
+function squareRoot() {
+  document.calc.txt.value = Math.sqrt(document.calc.txt.value);
+}
+
+function exponential() {
+  if (document.calc.txt.value == 0)
+    document.calc.txt.value = Math.E;
+  else
+    document.calc.txt.value = document.calc.txt.value * Math.E;
+}
+
+//ToDo - coloquei x ao quadrado, porém na calculadora do google
+// ela eleva o valor ao número que o usuário informa.
+function squared() {
+  document.calc.txt.value = Math.pow(document.calc.txt.value, 2);
+}
+
+//ToDo - arrumar a função de porcentagem, uma outra forma para fazer
+function percentage(){
+  document.calc.txt.value = document.calc.txt.value / 100;
+}
+
+// ToDo - pensar na lógica para fazer essa função.
+function memoryAns(){
+  document.calc.txt.value += ans;
 }
