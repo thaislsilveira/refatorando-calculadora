@@ -1,36 +1,36 @@
 function equal() {
 
   // if(!calc.txt.value) return;
-
+  
   try {
-    document.calc.txt.value = eval(calc.txt.value);
+    document.getElementById('equation').value = eval(calc.txt.value);
   } catch{
-    return document.calc.txt.value = 'Erro de sintaxe'
+    return document.getElementById('equation').value = 'Erro de sintaxe'
   }
 }
 
 function point() {
-  return document.calc.txt.value += '.';
+  return document.getElementById('equation').value += '.';
 }
 
 function twoZeros() {
-  return document.calc.txt.value += '00';
+  return document.getElementById('equation').value += '00';
 }
 
 function zero() {
-  return document.calc.txt.value += '0';
+  return document.getElementById('equation').value += '0';
 }
 
 function one() {
-  return document.calc.txt.value += '1';
+  return document.getElementById('equation').value += '1';
 }
 
 function two() {
-  return document.calc.txt.value += '2';
+  return document.getElementById('equation').value += '2';
 }
 
 function three() {
-  return document.calc.txt.value += '3';
+  return document.getElementById('equation').value += '3';
 }
 
 function four() {
