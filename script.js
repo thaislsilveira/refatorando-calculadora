@@ -153,6 +153,6 @@ function percentage(){
 }
 
 // ToDo - pensar na lógica para fazer essa função.
-function memoryAns(){
-  document.calc.txt.value += ans;
-}
+// function memoryAns(){
+//   document.calc.txt.value += ans;
+// }
