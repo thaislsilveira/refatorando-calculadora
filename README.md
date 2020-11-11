@@ -35,7 +35,7 @@
 <br />
 
 # :rocket: Features
-<p>👉 Esse projeto foi baseado no **projeto #1** do Desafio [90sites90days](https://github.com/dorlyneto/90sites90days) do Mestre [Dorly Neto](https://github.com/dorlyneto)</p>
+👉 Esse projeto foi baseado no **projeto #1** do Desafio [90sites90days](https://github.com/dorlyneto/90sites90days) do Mestre [Dorly Neto](https://github.com/dorlyneto)
 
 <p>🔥 Uma Calculadora Científica temática</p>
 
@@ -92,4 +92,8 @@ Se você já encontrou uma solução para o seu problema **Não fique de fora e 
 
 Released in 2020.
 
-Made with love by [Breno Romeiro](https://github.com/obrenoco) 💜🚀
+💜🚀 Made with love by 🚀💜 <br />
+👩‍🚀 [Thaís Silveira](https://github.com/thaislsilveira) <br /> 
+👩‍🚀 [Priscila Pinheiro](https://github.com/pripinheiro) <br />
+👨‍🚀 [Ruanderson Vieira](https://github.com/Ruandersonvieira) <br />
+👨‍🚀 [Breno Romeiro](https://github.com/obrenoco) 
