@@ -162,8 +162,8 @@ function exponential() {
 //ToDo - coloquei x ao quadrado, porém na calculadora do google
 // ela eleva o valor ao número que o usuário informa.
 function squared() {
-  // document.getElementById('equation').value = Math.pow(document.getElementById('equation').value, 2);
-  return document.getElementById('equation').value += '²'
+  document.getElementById('equation').value = Math.pow(document.getElementById('equation').value, 2);
+  // return document.getElementById('equation').value += 'x²'
 }
 
 //ToDo - arrumar a função de porcentagem, uma outra forma para fazer
