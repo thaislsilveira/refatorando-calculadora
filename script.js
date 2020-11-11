@@ -6,7 +6,9 @@ function equal() {
     display.split("").map(i=>{
       switch(i) {
         case 'π':
-          return equation += `*Math.PI`;
+          return equation += Math.PI;
+        case 'π':
+          return equation = Math.PI;
         default:
         return equation +=i
       }
