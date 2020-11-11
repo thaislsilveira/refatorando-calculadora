@@ -3,9 +3,22 @@ function equal() {
   // if(!calc.txt.value) return;
   
   try {
-    let number = document.getElementById('equation').value;
-    result = eval(number);
-    document.getElementById('equation').value = result;
+    const display = document.getElementById('equation').value;
+    let equation = '';
+    display.split("").map(i=>{
+      switch(i) {
+        case 'π':
+          return equation +='*3.14159265'
+          case 'x²':
+            return equation +='ˆ2'
+        default:
+        return equation +=i
+      }
+    }) 
+
+    console.log(equation)
+
+    document.getElementById('equation').value = eval(equation);
   } catch{
     return document.getElementById('equation').value = 'Erro de sintaxe'
   }
@@ -114,10 +127,10 @@ function show(content) {
 }
 
 function pi() {
-  if (document.getElementById('equation').value == 0)
-      document.getElementById('equation').value = Math.PI;
-  else
-    document.getElementById('equation').value = document.getElementById('equation').value * Math.PI;
+  // if (document.getElementById('equation').value == 0)
+  //     document.getElementById('equation').value = Math.PI;
+  // else
+    document.getElementById('equation').value = document.getElementById('equation').value += 'π'; 
 }
 
 //ToDo - o fatorial está funcionando, porém no google e em outras calculadora 
@@ -149,7 +162,8 @@ function exponential() {
 //ToDo - coloquei x ao quadrado, porém na calculadora do google
 // ela eleva o valor ao número que o usuário informa.
 function squared() {
-  document.getElementById('equation').value = Math.pow(document.getElementById('equation').value, 2);
+  // document.getElementById('equation').value = Math.pow(document.getElementById('equation').value, 2);
+  return document.getElementById('equation').value += '²'
 }
 
 //ToDo - arrumar a função de porcentagem, uma outra forma para fazer
