@@ -3,14 +3,14 @@ function equal() {
   try {
     const display = document.getElementById('equation').value;
     let equation = '';
-    display.split("").map(i=>{
+    display.split("").map((i, index) => {
+      if (i ==='π' && index ===0) return equation += Math.PI;
+  
       switch(i) {
         case 'π':
-          return equation += Math.PI;
-        case 'π':
-          return equation = Math.PI;
+          return equation += `*Math.PI`;
         default:
-        return equation +=i
+        return equation +=i;
       }
     }) 
 
