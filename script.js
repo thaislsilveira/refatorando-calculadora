@@ -7,6 +7,8 @@ function equal() {
       switch(i) {
         case 'π':
           return equation += `*Math.PI`;
+        case 'π':
+          return equation = Math.PI;
         default:
         return equation +=i
       }
