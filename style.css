@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
 :root {
-    --color-primary: #8464e6;
-    --color-primary-hover: #9466ff;
-    --color-secondary: #04d361;
+    --color-primary: #8454e4;
+    --color-secondary: #15bd66;
     --color-key: #b1babe;
-    --color-pink: #ff3077;
-    --color-pink-hover: #c3255d;
-    --color-blue: #03b1ff;
-    --color-blue-hover: #0495d6;
     --color-background: #091921;
     --color-grey-dark: #8c8c8c;
     --color-grey-medium:  #bfbfbf;
@@ -43,7 +38,7 @@ body {
     padding: 35px;
     border-radius: 10px;
     background-color: var(--color-grey-medium); 
-    box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77); 
+    box-shadow: 9px 7px 5px var(--color-box-shadow); 
 }
 
 .calculator div {
@@ -67,8 +62,12 @@ body {
     border: none;
     outline: none;
     padding: 10px;
-    font-size: 18px;
+    font-size: 35px;
     border-radius: 10px 10px 0 0;
+}
+
+.calculator .value::placeholder{
+    color: var(--color-grey-light);
 }
 
 .calculator span {
@@ -85,6 +84,8 @@ body {
     right: .8px;
     bottom: .8px;
     box-shadow: 1px 2px 1px var(--color-box-shadow);
+
+    font-size: 20px;
 }
 
 .calculator span:hover {
@@ -97,21 +98,25 @@ body {
 }
 
 .calculator span.equal {
-    background: var(--color-blue);
+    background: var(--color-secondary);
 }
 
 .calculator span.equal:hover {
-    background: var(--color-blue-hover);
+    background: var(--color-primary);
     color: var(--color-white);
+    transition-delay: 0.4s;
 }
+
 
 .calculator span.clear {
     grid-column: 2fr ;
     width: 100%;
-    background: var(--color-pink)
+    background: var(--color-primary);
 }
 
 .calculator span.clear:hover {
     color: white;
-    background-color: var(--color-pink-hover);
+    background-color: var(--color-secondary);
+    transition-delay: 0.4s;
 }
+
