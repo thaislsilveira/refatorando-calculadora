@@ -1,6 +1,4 @@
 function equal() {
-
-  // if(!calc.txt.value) return;
   
   try {
     const display = document.getElementById('equation').value;
@@ -8,9 +6,10 @@ function equal() {
     display.split("").map(i=>{
       switch(i) {
         case 'π':
-          return equation +='*3.14159265'
-          case 'x²':
-            return equation +='ˆ2'
+          return equation += Math.PI;
+        case 'π':
+          return equation = Math.PI;
+
         default:
         return equation +=i
       }
@@ -20,7 +19,7 @@ function equal() {
 
     document.getElementById('equation').value = eval(equation);
   } catch{
-    return document.getElementById('equation').value = 'Erro de sintaxe'
+    return document.getElementById('equation').value = 'Erro de sintaxe';
   }
 }
 
@@ -92,25 +91,19 @@ function clearImput() {
   return document.getElementById('equation').value = '';
 }
 
-//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
-//google aparece assim: sin()
 function sin() {
   document.getElementById('equation').value = Math.sin(document.getElementById('equation').value);
 }
-//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
-//google aparece assim: cos()
+
+
 function cos() {
   document.getElementById('equation').value = Math.cos(document.getElementById('equation').value);
 }
 
-//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
-//google aparece assim: tan()
 function tan() {
   document.getElementById('equation').value = Math.tan(document.getElementById('equation').value);
 }
 
-//ToDo - dar uma olhada melhor no código, pois na calculadora científica do 
-//google aparece assim: log()
 function log() {
   document.getElementById('equation').value = Math.log10(document.getElementById('equation').value);
 }
@@ -127,14 +120,10 @@ function show(content) {
 }
 
 function pi() {
-  // if (document.getElementById('equation').value == 0)
-  //     document.getElementById('equation').value = Math.PI;
-  // else
+
     document.getElementById('equation').value = document.getElementById('equation').value += 'π'; 
 }
 
-//ToDo - o fatorial está funcionando, porém no google e em outras calculadora 
-//científicas o fatorial aparece: numero!
 function factorial() {
   let x = document.getElementById('equation').value;
   if (x == 0 || x == 1)
@@ -159,19 +148,12 @@ function exponential() {
     document.getElementById('equation').value = document.getElementById('equation').value * Math.E;
 }
 
-//ToDo - coloquei x ao quadrado, porém na calculadora do google
-// ela eleva o valor ao número que o usuário informa.
 function squared() {
+  
   document.getElementById('equation').value = Math.pow(document.getElementById('equation').value, 2);
   // return document.getElementById('equation').value += 'x²'
 }
 
-//ToDo - arrumar a função de porcentagem, uma outra forma para fazer
 function percentage(){
   document.getElementById('equation').value = document.getElementById('equation').value / 100;
 }
-
-// ToDo - pensar na lógica para fazer essa função.
-// function memoryAns(){
-//   document.calc.txt.value += ans;
-// }
