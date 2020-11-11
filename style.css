@@ -30,7 +30,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--color-background);
+    background: url(./assets/background.png);
+    background-size: auto; 
 }
 
 .calculator {
@@ -41,7 +42,8 @@ body {
     grid-row-gap: 1px;
     padding: 35px;
     border-radius: 10px;
-    background-color: var(--color-grey-medium);   
+    background-color: var(--color-grey-medium); 
+    box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77); 
 }
 
 .calculator div {
@@ -104,7 +106,7 @@ body {
 }
 
 .calculator span.clear {
-    grid-column: span 2;
+    grid-column: 2fr ;
     width: 100%;
     background: var(--color-pink)
 }
