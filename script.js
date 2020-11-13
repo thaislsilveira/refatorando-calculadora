@@ -1,5 +1,4 @@
-function equal() {
-  
+function equal() {  
   try {
     const display = document.getElementById('equation').value;
     let equation = '';
@@ -16,7 +15,12 @@ function equal() {
 
     document.getElementById('equation').value = eval(equation);
   } catch{
-    return document.getElementById('equation').value = 'Erro de sintaxe';
+
+    document.getElementById('equation').value = 'Erro de sintaxe';
+
+    setTimeout(function() {
+      document.getElementById('equation').value = ''
+    }, 500);
   }
 }
 
@@ -108,10 +112,8 @@ function log() {
 
 function show(content) {
   if (document.getElementById('equation').value.localeCompare("undefined") == 0) {
-    console.log('aqui');
     document.getElementById('equation').value = content; 
   } else {
-    console.log('aqui2');
     document.getElementById('equation').value += content;
   }
 }
